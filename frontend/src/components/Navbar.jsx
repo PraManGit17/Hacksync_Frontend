@@ -20,7 +20,7 @@ export default function Navbar() {
         transition-all duration-300 ease-out
 
         ${scrolled
-          ? 'backdrop-blur-xl bg-white/10 border-b border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.35)]'
+          ? 'backdrop-blur-xl bg-white/0 '
           : 'bg-transparent'
         }
       `}
@@ -41,7 +41,7 @@ export default function Navbar() {
       </div>
 
       <div className='flex items-center gap-4'>
-        <button className='bg-blue-500/60 rounded-md w-30 px-2 py-2'>Get Started</button>
+        <button className='bg-[#360ba1] rounded-md w-30 px-2 py-2'>Get Started</button>
         <button className='border border-white px-6 py-2 rounded-lg'>Login</button>
       </div>
     </div>
