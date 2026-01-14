@@ -1,1 +1,0 @@
-# Hacksync_Frontend
