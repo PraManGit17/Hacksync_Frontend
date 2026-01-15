@@ -7,15 +7,14 @@ export const companies = [
   { name: "Spotify", logo: "/logos/spotify.png" },
   { name: "Uber", logo: "/logos/uber.png" },
 
-  { name: "Airbnb", logo: "/logos/airbnb.png" },
-  { name: "Twitter (X)", logo: "/logos/twitter-x.png" },
+  { name: "Whatsapp", logo: "/logos/whatsapp.png" },
   { name: "LinkedIn", logo: "/logos/linkedin.png" },
   { name: "Snapchat", logo: "/logos/snapchat.png" },
-  { name: "PayPal", logo: "/logos/paypal.png" },
+  { name: "Paytm", logo: "/logos/paytm.png" },
   { name: "Stripe", logo: "/logos/stripe.png" },
   { name: "Shopify", logo: "/logos/shopify.png" },
-  { name: "Salesforce", logo: "/logos/salesforce.png" },
-  { name: "Intel", logo: "/logos/intel.png" },
+  { name: "Openai", logo: "/logos/openai.png" },
+  { name: "HP", logo: "/logos/hp.png" },
   { name: "Nvidia", logo: "/logos/nvidia.png" },
 
   { name: "Google", logo: "/logos/google.png" },
@@ -69,7 +68,7 @@ export const companies = [
 
   { name: "Coursera", logo: "/logos/coursera.png" },
   { name: "Udemy", logo: "/logos/udemy.png" },
-  { name: "Byju’s", logo: "/logos/byjus.png" },
+  { name: "Byju's", logo: "/logos/byjus.png" },
   { name: "Unacademy", logo: "/logos/unacademy.png" },
   { name: "Scaler", logo: "/logos/scaler.png" },
   { name: "Meesho", logo: "/logos/meesho.png" },
@@ -78,7 +77,7 @@ export const companies = [
   { name: "PhonePe", logo: "/logos/phonepe.png" },
   { name: "Cred", logo: "/logos/cred.png" },
 
-  { name: "Rivian", logo: "/logos/rivian.png" },
+  { name: "Amazon", logo: "/logos/amazon.png" },
   { name: "SpaceX", logo: "/logos/spacex.png" },
   { name: "Blue Origin", logo: "/logos/blue-origin.png" },
   { name: "DoorDash", logo: "/logos/doordash.png" },

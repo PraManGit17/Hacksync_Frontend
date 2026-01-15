@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Sparkles } from 'lucide-react'
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -30,14 +30,14 @@ export default function Navbar() {
       <div className='flex items-center gap-3 '>
         <img src="/images/skillspherelogo.png" className='w-8 h-8' />
         {/* <Sparkles className='text-white' /> */}
-        <div className='text-3xl oxanium mt-1'>Skillsphere</div>
+        <Link to='/' className='text-3xl oxanium mt-1'>Skillsphere</Link>
       </div>
 
       <div className='poppins text-lg flex items-center gap-10 mt-2'>
-        <div>Career</div>
-        <div>Portfolio</div>
-        <div>Interview</div>
-        <div>Resume</div>
+        <Link to='/path' className='hover:cursor-pointer'>Career</Link>
+        <Link to='/portfolio' className='hover:cursor-pointer'>Portfolio</Link>
+        <Link to='/interview' className='hover:cursor-pointer'>Interview</Link>
+        <Link to='/resume' className='hover:cursor-pointer'>Resume</Link>
       </div>
 
       <div className='flex items-center gap-4'>

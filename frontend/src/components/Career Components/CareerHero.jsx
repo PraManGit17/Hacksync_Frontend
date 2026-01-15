@@ -189,7 +189,9 @@ const CareerHero = () => {
                     opacity-0
                     group-hover:opacity-100
                     transition-opacity duration-300
-                    bg-gradient-to-b from-[#4242d6] to-white/0"
+                    bg-gradient-to-b from-[#4242d6] to-white/0
+                    cursor-pointer
+                    "
                 />
                 <img
                   src={company.logo}
@@ -207,7 +209,7 @@ const CareerHero = () => {
 
       {/* Radial gradient background */}
       <div className='absolute z-0 w-[50%] h-full scale-220 rounded-full -top-100 -left-50 
-          bg-[radial-gradient(circle_at_center,_#000_0%,_#1a1a1a_45%,_#2f2f8f_70%,_#5151BE_100%,_transparent_200%)]'></div>
+          bg-[radial-gradient(circle_at_center,_#000_0%,_#1a1a1a_35%,_#2f2f8f_60%,_#5151BE_100%,_transparent_200%)]'></div>
 
       {/* Foreground hero content */}
       <div

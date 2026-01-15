@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ResumeEditor from '../components/ResumeEditor';
-import ResumePreview from '../components/ResumePreview';
+import ResumeEditor from './ResumeEditor';
+import ResumePreview from './ResumePreview';
 
 const Resume = () => {
   const [formData, setFormData] = useState({
