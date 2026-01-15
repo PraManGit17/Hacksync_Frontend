@@ -211,9 +211,9 @@ const OnBoarding = () => {
       console.log('Saved Resume Data to userProfile:', formData);
       showToast('Profile saved successfully!', 'success');
       
-      // Navigate to career page after a short delay
+      // Navigate to roadmaps page after a short delay
       setTimeout(() => {
-        navigate('/career');
+        navigate('/roadmaps');
       }, 1500);
     } catch (err) {
       console.error('Failed saving profile', err);
@@ -229,7 +229,7 @@ const OnBoarding = () => {
       showToast('Profile saved! Redirecting to Career Roadmap...', 'success');
       
       setTimeout(() => {
-        navigate('/career');
+        navigate('/roadmaps');
       }, 1500);
     } catch (err) {
       console.error('Failed to save profile', err);

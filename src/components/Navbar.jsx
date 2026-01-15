@@ -1,56 +1,76 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // Utility to check active link
+  const isActive = (path) => location.pathname === path;
 
   return (
-    <div
+    <nav
       className={`
-        fixed top-0 left-0 w-full py-5 z-20 px-35 text-white
-        flex items-center justify-between
-        transition-all duration-300 ease-out
-
-        ${scrolled
-          ? 'backdrop-blur-xl bg-white/0 '
-          : 'bg-transparent'
-        }
+        fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out
+        ${scrolled ? 'py-3 backdrop-blur-md bg-black/40 border-b border-white/5' : 'py-6 bg-transparent'}
       `}
     >
+      <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between">
+        
+        {/* LOGO */}
+        <div className='flex items-center gap-3 group'>
+          <img src="/images/skillspherelogo.png" className='w-8 h-8 group-hover:rotate-12 transition-transform' alt="Logo" />
+          <Link to='/' className='text-2xl font-bold tracking-tighter uppercase italic text-white'>
+            Skill<span className='text-purple-500'>Sphere</span>
+          </Link>
+        </div>
 
+        {/* NAV LINKS */}
+        <div className='hidden lg:flex items-center gap-8'>
+          {[
+            { name: 'Evaluate', path: '/evaluation' },
+            { name: 'Jobs', path: '/jobs' },
+            { name: 'Interview', path: '/interview' },
+            { name: 'Resume', path: '/resume' },
+            { name: 'Flashcards', path: '/flashcards-topics' },
+            { name: 'Kanban', path: '/kanban' },
+            { name: 'Roadmaps', path: '/roadmaps' },
+          ].map((link) => (
+            <Link 
+              key={link.path} 
+              to={link.path} 
+              className={`text-[13px] font-bold uppercase tracking-widest transition-colors hover:text-purple-500 
+                ${isActive(link.path) ? 'text-purple-500' : 'text-zinc-400'}`}
+            >
+              {link.name}
+            </Link>
+          ))}
+          <a 
+            href="http://localhost:3000/interview/liveInterview.html?roomId=test123&userId=mentor1&role=mentor&name=John"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[13px] font-bold uppercase tracking-widest transition-colors hover:text-purple-500 text-zinc-400"
+          >
+            Peer Group
+          </a>
+        </div>
 
-      <div className='flex items-center gap-3 '>
-        <img src="/images/skillspherelogo.png" className='w-8 h-8' />
-        {/* <Sparkles className='text-white' /> */}
-        <Link to='/' className='text-3xl oxanium mt-1'>Skillsphere</Link>
+        {/* ACTIONS */}
+        <div className='flex items-center gap-4'>
+          <button className='hidden md:block text-[11px] font-bold uppercase tracking-widest text-zinc-400 hover:text-white transition-colors'>
+            Login
+          </button>
+          <button className='bg-purple-600 hover:bg-purple-500 text-white text-[11px] font-bold uppercase tracking-widest px-6 py-3 rounded-xl transition-all shadow-lg shadow-purple-900/20 active:scale-95'>
+            Get Started
+          </button>
+        </div>
       </div>
-
-      <div className='poppins text-lg flex items-center gap-10 mt-2'>
-        <Link to='/path' className='hover:cursor-pointer'>Career</Link>
-        <Link to='/portfolio' className='hover:cursor-pointer'>Portfolio</Link>
-        <Link to='/interview' className='hover:cursor-pointer'>Interview</Link>
-        <Link to='/resume' className='hover:cursor-pointer'>Resume</Link>
-      </div>
-
-      <div className='flex items-center gap-4'>
-        <button className='bg-[#360ba1] rounded-md w-30 px-2 py-2'>Get Started</button>
-        <button className='border border-white px-6 py-2 rounded-lg'>Login</button>
-      </div>
-    </div>
+    </nav>
   )
 }
-
-
-
-
-// <div className="fixed top-0 left-0 w-full px-35 py-5  z-20 text-white bg-transparent
-//   flex items-center justify-between
-// ">

@@ -30,6 +30,10 @@ import ProfileVerification from './pages/ProfileVerification';
 import FlashCards from './pages/FlashCards';
 import FlashCardsTopics from './pages/FlashCardsTopics';
 import KanbanBoard from './pages/KanbanBoard';
+import RoadmapDetailPage from './pages/RoadmapDetailPage';
+import CourseRecommender from './pages/CourseRecommender';
+import Evaluation from './pages/Evaluation';
+import JobSearch from './pages/JobSearch';
 
 const App = () => {
   return (
@@ -47,6 +51,10 @@ const App = () => {
         <Route path='/flash-cards/:topic' element={<FlashCards/>} />
         <Route path='/flashcards-topics' element={<FlashCardsTopics/>} />
         <Route path="/kanban" element={<KanbanBoard />} />
+        <Route path="/roadmaps" element={<RoadmapDetailPage />} />
+        <Route path="/courses" element={<CourseRecommender />} />
+        <Route path="/evaluation" element={<Evaluation />} />
+        <Route path="/jobs" element={<JobSearch />} />
 
       </Routes>
     </>
