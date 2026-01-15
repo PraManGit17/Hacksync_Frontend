@@ -39,6 +39,7 @@ export default function Navbar() {
             { name: 'Resume', path: '/resume' },
             { name: 'Flashcards', path: '/flashcards-topics' },
             { name: 'Kanban', path: '/kanban' },
+            { name: 'Roadmaps', path: '/roadmaps' },
           ].map((link) => (
             <Link 
               key={link.path} 
