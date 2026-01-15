@@ -26,6 +26,9 @@ import InterviewLobby from './pages/InterviewLobby';
 import FeedbackReport from './pages/FeedbackReport';
 import Mock from './pages/Mock';
 import Career from './pages/Career';
+import FlashCards from './pages/FlashCards';
+import FlashCardsTopics from './pages/FlashCardsTopics';
+import KanbanBoard from './pages/KanbanBoard';
 
 const App = () => {
   return (
@@ -39,6 +42,10 @@ const App = () => {
         <Route path='/interview-lobby' element={<InterviewLobby/>} />
         <Route path='/interview-room' element={<Mock/>}/>
         <Route path='/interview-feedback' element={<FeedbackReport/>} />
+        <Route path='/flash-cards/:topic' element={<FlashCards/>} />
+        <Route path='/flashcards-topics' element={<FlashCardsTopics/>} />
+        <Route path="/kanban" element={<KanbanBoard />} />
+
 
       </Routes>
     </>
