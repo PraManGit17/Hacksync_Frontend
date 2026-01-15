@@ -26,6 +26,7 @@ import InterviewLobby from './pages/InterviewLobby';
 import FeedbackReport from './pages/FeedbackReport';
 import Mock from './pages/Mock';
 import Career from './pages/Career';
+import Portfolio from './pages/Portfolio';
 
 const App = () => {
   return (
@@ -34,11 +35,14 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
         <Route path="path" element={<Career />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path='/resume' element={<ResumePage />}/>
         <Route path='/interview' element={<InterviewDashboard/>}/>
         <Route path='/interview-lobby' element={<InterviewLobby/>} />
         <Route path='/interview-room' element={<Mock/>}/>
         <Route path='/interview-feedback' element={<FeedbackReport/>} />
+
+        
 
       </Routes>
     </>
