@@ -34,7 +34,7 @@ export default function Navbar() {
       </div>
 
       <div className='poppins text-lg flex items-center gap-10 mt-2'>
-        <div>Carieer</div>
+        <div>Career</div>
         <div>Portfolio</div>
         <div>Interview</div>
         <div>Resume</div>
