@@ -225,7 +225,7 @@ const CareerHero = () => {
         </div>
 
         <div className='flex items-center gap-10 mt-8 poppins'>
-          <button className='bg-[#4209d1] rounded-md  px-4 py-2'>Generate Roadmap</button>
+          <button className='bg-gradient-to-r from-[#4242d6] to-[#5151e4] rounded-md  px-4 py-2 border-white border-2'>Generate Roadmap</button>
         </div>
       </div>
 

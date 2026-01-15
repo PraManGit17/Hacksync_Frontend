@@ -4,7 +4,7 @@ import { roadmapSteps } from '../data/RoadmapData';
 
 const Roadmap = () => {
   return (
-    <div className="relative h-[1200px] w-full mt-20">
+    <div className="relative h-[1200px] w-full mt-20 0">
       {/* SVG scaled to 100x100 viewbox so the path 'd' values 
           match your RoadmapData x and y percentages exactly.
       */}
